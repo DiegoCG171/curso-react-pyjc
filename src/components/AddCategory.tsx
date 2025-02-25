@@ -1,7 +1,7 @@
 import { useState } from "react"
 
 interface Props {
-    addCategory: any;
+    addCategory: (value: string) => void;
 }
 
 export const AddCategory = ({ addCategory }: Props) => {
@@ -14,7 +14,7 @@ export const AddCategory = ({ addCategory }: Props) => {
 
     const handleSubmit = (e: any) => {
         e.preventDefault();
-        addCategory((prev: any) => [...prev, inputValue])
+        addCategory(inputValue)
         setInputValue('')
     }
 
