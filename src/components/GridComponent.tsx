@@ -8,7 +8,7 @@ export const GridComponent = ({ categories }: Props) => {
   return (
     <>
       {categories.map((category) => {
-        return <GridItem category={category} />;
+        return <GridItem key={category} category={category} />;
       })}
     </>
   );
